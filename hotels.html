@@ -8,7 +8,7 @@
     <div class="container">
       <header class="main-header">
         <div class="index-logo">
-          <a href="#">
+          <a href="index.html">
             <img src="img/logo.png" width="138" height="70" alt="Седона">
           </a>
         </div>    
@@ -18,7 +18,7 @@
               <a href="#">Информация</a>
             </li>  
             <li>
-              <a href="#">Гостиницы</a>
+              <a href="hotels.html">Гостиницы</a>
             </li>
             <li>
               <a href="#">Карта штата</a>
@@ -30,16 +30,126 @@
         </nav>
       </header>
       <section class="filtres">
-        <div class="infrastructure">
-          
+        <form class="filtres-form" action="https://echo.htmlacademy.ru" method="post">
+          <div class="infrastructure">
+            <h2>Инфраструктура</h2>
+            <label for="pool">Бассейн</label>
+            <input type="checkbox" name="pool" id="pool" checked>
+            <label for="parking">Парковка</label>
+            <input type="checkbox" name="parking" id="parking">
+            <label for="wi-fi">Wi-fi</label>
+            <input type="checkbox" name="wi-fi" id="wi-fi">
+          </div>
+          <div class="type-housing">
+            <label for="hotel">Гостиница</label>
+            <input type="checkbox" name="hotel" id="hotel" checked>
+            <label for="motel">Мотель</label>
+            <input type="checkbox" name="motel" id="motel" checked>
+            <label for="apartments">Апартаменты</label>
+            <input type="checkbox" name="apartments" id="apartments" checked>  
+          </div>
+          <div class="cost-day">
+            <h2>стоимость в сутки (Р):</h2>
+            <div class="range">
+              <div class="range-zero">от 0</div>
+              <div class="range-max">до 3000</div>
+            </div>
+            <input min="0" max="50000" type="range">
+            <button type="submit" class="btn btn-cost-day">Показать</button>   
+          </div>
+        </form>
+      </section>   
+      <section class="hotels-sort-info">
+        <div class="hotels-found-count">
+          <h2>Найдено: 3</h2>
         </div>
-        <div class="type-housing">
-          
+        <div class="hotels-sort-type">
+          <span class="hotels-sort-type-title">Сортировка:</span>
+          <ul>
+            <li>
+              <a href="#">По цене</a> 
+            </li>
+            <li>
+              <a href="#">По типу</a> 
+            </li>
+            <li>
+              <a href="#">По рейтингу</a> 
+            </li>
+          </ul>  
         </div>
-        <div class="cost-day">
-          
-        </div>
-      </section>     
+        <div class="hotels-sort-rating">
+          <a href="#" class="icon-up-dir"></a>
+          <a href="#" class="icon-down-dir"></a>  
+        </div>  
+      </section>
+      <section class="hotels-found">
+        <article class="hotels-found-item">
+          <div class="hotels-found-image">
+            <img src="img/amara-resort-spa.jpg" alt="Amara resort spa">
+          </div>
+          <div class="hotels-found-info">
+            <h2>Amara resort &#38; spa</h2>
+            <div class="hotels-found-more">
+              <span>Гостиница</span>
+              <a href="#">Подробнее</a>   
+            </div>
+            <div class="hotels-found-book">
+              <span>от 3500 Р.</span>
+              <a href="#">Забронировать</a>     
+            </div>
+          </div>
+          <div class="hotels-found-rating">
+            <span class="icon-star"></span>
+            <span class="icon-star"></span>
+            <span class="icon-star"></span>
+            <span class="icon-star"></span>
+            <span class="hotels-count-rating">Рейтинг: 8,5</span>  
+          </div>
+        </article>
+        <article class="hotels-found-item">
+          <div class="hotels-found-image">
+            <img src="img/desert-quail-inn.jpg" alt="Desert quail inn">
+          </div>
+          <div class="hotels-found-info">
+            <h2>Desert quail inn</h2>
+            <div class="hotels-found-more">
+              <span>Мотель</span>
+              <a href="#">Подробнее</a>   
+            </div>
+            <div class="hotels-found-book">
+              <span>от 2000 Р.</span>
+              <a href="#">Забронировать</a>     
+            </div>
+          </div>
+          <div class="hotels-found-rating">
+            <span class="icon-star"></span>
+            <span class="icon-star"></span>
+            <span class="hotels-count-rating">Рейтинг: 8,9</span>  
+          </div>
+        </article>
+        <article class="hotels-found-item">
+          <div class="hotels-found-image">
+            <img src="img/villas-at-poco-diablo.jpg" alt="Villas-at-poco-diablo">
+          </div>
+          <div class="hotels-found-info">
+            <h2>Villas-at-poco-diablo</h2>
+            <div class="hotels-found-more">
+              <span>Апартаменты</span>
+              <a href="#">Подробнее</a>   
+            </div>
+            <div class="hotels-found-book">
+              <span>от 4000 Р.</span>
+              <a href="#">Забронировать</a>     
+            </div>
+          </div>
+          <div class="hotels-found-rating">
+            <span class="icon-star"></span>
+            <span class="icon-star"></span>
+            <span class="icon-star"></span>
+            <span class="hotels-count-rating">Рейтинг: 9,2</span>  
+          </div>
+        </article>
+      </section>
       <footer class="main-footer">
           <a href="#" class="footer-hashtag">#visitsedona</a>
           <div class="footer-social">
