@@ -8,7 +8,9 @@ body {
 
   background-color: #ffffff;
 }
-
+a {
+  color: #000000;
+}
 h1,
 h2,
 h3,
@@ -32,4 +34,25 @@ h4 {
 .hotels-found-count h3 {
   font-size: 21px;
   line-height: 26px;
+}
+p {
+  color: #333333;
+}
+.reasons-blue p {
+  color: #ffffff;
+}
+.reasons-blue {
+  background-color: #81b3d2;
+}
+.footer-copyright .logo-htmlacademy svg {
+  fill: #000000;
+  stroke: #000000;
+}
+.footer-copyright .logo-htmlacademy:hover svg {
+  fill: #81b3d2;
+  stroke: #81b3d2;
+}
+.footer-copyright .logo-htmlacademy:active svg {
+  fill: #bdbbbc;
+  stroke: #bdbbbc;
 }
