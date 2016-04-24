@@ -112,7 +112,7 @@ footer,
 }
 .image-sedona-titles {
   margin-top: 75px;
-  margin-bottom: 80px;
+  margin-bottom: 24px;
 }
 .image-sedona-line {
   vertical-align: bottom;
@@ -140,11 +140,11 @@ footer,
 .reasons-title h1 {
   margin: 0;
   margin-top: 60px;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 .reasons-title p {
   margin: 0;
-  margin-bottom: 60px;
+  margin-bottom: 52px;
 }
 .reasons {
   -webkit-align-items: center;
@@ -174,6 +174,7 @@ footer,
 .features-item,
 .reason-item {
   width: 400px;
+  margin-bottom: 10px;
 
   text-align: center;
 }
@@ -206,12 +207,12 @@ footer,
 }
 .search-hotels h3 {
   margin: 0;
-  margin-top: 60px;
-  margin-bottom: 40px;
+  margin-top: 57px;
+  margin-bottom: 35px;
 }
 .search-hotels p {
   margin: 0;
-  margin-bottom: 60px;
+  margin-bottom: 48px;
 }
 .btn {
   text-align: center;
@@ -230,7 +231,7 @@ footer,
   outline: none;
 }
 .btn-search-hotels {
-  padding: 20px 139px;
+  padding: 30px 139px;
 
   font-weight: bold;
   font-size: 21px;
@@ -254,7 +255,7 @@ footer,
   box-sizing: border-box;
   width: 567px;
   height: 400px;
-  padding: 45px;
+  padding: 59px 53px 60px 48px;
 
   background-color: #ffffff;
 }
@@ -262,28 +263,37 @@ label {
   font-weight: bold;
 }
 .map-form-item {
-  margin-bottom: 30px;
+  margin-bottom: 33px;
 }
 .map-form .date-check,
 .map-form .date-check-out {
-  margin-right: 20px;
+  margin-right: 15px;
 }
 .date-check {
   letter-spacing: 0.3px;
 }
 .map-form .grown-ups {
-  margin-right: 40px;
+  margin-right: 35px;
 }
 .children {
   margin-right: 25px;
-  margin-left: 50px;
+  margin-left: 42px;
 }
 .map-form input[type="date"] {
-  width: 345px;
-  height: 35px;
+  content: "\2611";
+
+  width: 325px;
+
+  font-weight: bold;
 
   background-color: #f2f2f2;
   border: none;
+  outline: none;
+      padding: 5px 10px 5px 10px;
+}
+.icon-calendar{
+  color: #c2c2c2;
+  font-size: 21px;
 }
 .filtres-form input[type=checkbox] {
   display: none;
@@ -304,7 +314,30 @@ label {
 .filtres-form input[type=checkbox]:checked + label:before {
   content: "\2611";
 }
+.btn-search-form {
+  padding: 6px 9.2px;
 
+  color: #a9a9a9;
+}
+.btn-search-form:hover {
+  color: #000000;
+}
+.btn-search-form:active {
+  color: #81b3d2;
+}
+input[type=number] {
+  width: 38px;
+  height: 38px;
+  margin: 0;
+  padding: 0;
+
+  font-weight: bold;
+  text-align: center;
+
+  background-color: #dddddd;
+  border: none;
+  outline: none;
+}
 .btn-find {
   padding: 15px 200px;
 
@@ -421,7 +454,7 @@ label {
   width: 540px;
   padding: 30px 150px;
 }
-.range{
+.range {
   width: 320px;
 }
 .btn-cost-day {
@@ -546,8 +579,10 @@ label {
 .hotels-found-info h1 a:active {
   color: #cacaca;
 }
-.hotels-count-rating{
-  color: #666666;
-  background-color: #f2f2f2;
+.hotels-count-rating {
   padding: 4px 14px;
+
+  color: #666666;
+
+  background-color: #f2f2f2;
 }
