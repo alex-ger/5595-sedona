@@ -22,7 +22,7 @@
             <li>
               <a href="#">Карта штата</a>
             </li>
-            <li>
+            <li class="main-navigation-selected">
               <a href="hotels.html">Гостиницы</a>
             </li>
           </ul>
@@ -37,21 +37,21 @@
         <form class="filtres-form" action="https://echo.htmlacademy.ru" method="post">
           <div class="infrastructure">
             <h2>Инфраструктура:</h2>
-            <label for="pool">Бассейн</label>
-            <input type="checkbox" name="pool" id="pool" checked>
-            <label for="parking">Парковка</label>
-            <input type="checkbox" name="parking" id="parking">
+            <input type="checkbox" name="check" id="pool" checked>
+            <label for="pool">Бассейн</label> <br>
+            <input type="checkbox" name="check" id="parking">
+            <label for="parking">Парковка</label> <br>
+            <input type="checkbox" name="check" id="wi-fi">
             <label for="wi-fi">Wi-fi</label>
-            <input type="checkbox" name="wi-fi" id="wi-fi">
           </div>
           <div class="type-housing">
             <h2>Тип жилья:</h2>
-            <label for="hotel">Гостиница</label>
             <input type="checkbox" name="hotel" id="hotel" checked>
-            <label for="motel">Мотель</label>
+            <label for="hotel">Гостиница</label> <br>
             <input type="checkbox" name="motel" id="motel" checked>
-            <label for="apartments">Апартаменты</label>
+            <label for="motel">Мотель</label><br>
             <input type="checkbox" name="apartments" id="apartments" checked>
+            <label for="apartments">Апартаменты</label>
           </div>
           <div class="cost-day">
             <h2>стоимость в сутки (Р):</h2>
