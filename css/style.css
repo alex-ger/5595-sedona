@@ -30,7 +30,6 @@ li {
 }
 p {
   line-height: 21px;
-  color: #333333;
 }
 section,
 article,
@@ -50,7 +49,7 @@ footer,
 .main-header {
   position: relative;
 }
-.main-navigation > ul {
+.main-navigation ul {
   display: -webkit-flex;
   display:    -moz-flex;
   display:     -ms-flex;
@@ -62,7 +61,7 @@ footer,
   margin: 0;
   padding: 0;
 }
-.main-navigation > ul > li > a {
+.main-navigation a {
   padding: 19px 80px;
 
   font-weight: bold;
@@ -71,19 +70,21 @@ footer,
 
   background-color: #ffffff;
 }
-.main-navigation > ul > li > a:hover {
+.main-navigation a:hover {
   color: #81b3d2;
 
   background-color: #fffde0;
 }
-.main-navigation > ul > li > a:active {
+.main-navigation a:active {
   color: #b2b2b2;
 }
 .index-logo {
   position: absolute;
   top: 0;
-  right: 45%;
   bottom: 0;
+  left: 50%;
+
+  transform: translateX(-50%);
 }
 .main-image-block {
   -webkit-flex-wrap: wrap;
@@ -141,17 +142,14 @@ footer,
   padding: 0;
 }
 .reasons-blue {
+  color: #ffffff;
+
   background-color: #81b3d2;
 }
 .reasons-blue-content {
   width: 400px;
 
   text-align: center;
-}
-.reasons-blue h2,
-.reasons-blue span,
-.reasons-blue p {
-  color: #ffffff;
 }
 .reason-image {
   height: 256px;
@@ -469,29 +467,32 @@ label {
   color: #81b3d2;
 }
 .hotels-sort-type-title,
-.sort-item{
+.sort-item {
   font-size: 12px;
   line-height: 18px;
 }
 .sort-item {
   color: #b2b2b2;
   text-decoration: none;
+
   border-bottom: 1px dotted #81b3d2;
 }
 .sort-item:hover {
   color: #81b3d2;
 }
-.sort-item:active{
-  color: #000;
+.sort-item:active {
+  color: #000000;
+
   border: none;
 }
 .active-sort {
   color: #81b3d2;
+
   border: none;
 }
 .active-sort:hover {
   color: #81b3d2;
 }
-.hotels-found-info h1 a{
+.hotels-found-info h1 a {
   text-decoration: none;
 }
