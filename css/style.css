@@ -8,7 +8,7 @@ body {
   font-weight: normal;
   font-size: 14px;
   line-height: 26px;
-  font-family: "PT Sans", "Helvetica", "Tahoma", sans-serif;
+  font-family: "PT Sans", "Helvetica", "Arial", sans-serif;
   color: #000000;
   text-transform: uppercase;
 
@@ -34,7 +34,11 @@ p {
 section,
 article,
 footer,
-.filtres-form {
+.filtres-form,
+.main-navigation ul,
+.hotels-sort-type,
+.hotels-sort-type ul,
+.hotels-found-action {
   display: -webkit-flex;
   display:    -moz-flex;
   display:     -ms-flex;
@@ -45,16 +49,12 @@ footer,
   width: 1200px;
 
   background-color: #ffffff;
+  box-shadow: 0 5px 15px 0 rgba(0,1,1,0.2);
 }
 .main-header {
   position: relative;
 }
 .main-navigation ul {
-  display: -webkit-flex;
-  display:    -moz-flex;
-  display:     -ms-flex;
-  display:      -o-flex;
-  display:         flex;
   -webkit-align-items: center;
           align-items: center;
   min-height: 56px;
@@ -259,7 +259,7 @@ footer,
 
   background-color: #ffffff;
 }
-label {
+.map-form label {
   font-weight: bold;
 }
 .map-form-item {
@@ -283,17 +283,17 @@ label {
   content: "\2611";
 
   width: 325px;
+  padding: 5px 10px 5px 10px;
 
   font-weight: bold;
 
   background-color: #f2f2f2;
   border: none;
   outline: none;
-      padding: 5px 10px 5px 10px;
 }
-.icon-calendar{
-  color: #c2c2c2;
+.icon-calendar {
   font-size: 21px;
+  color: #c2c2c2;
 }
 .filtres-form input[type=checkbox] {
   display: none;
@@ -308,8 +308,10 @@ label {
   content: "\2610";
 
   margin-right: 10px;
+  margin-left: 0;
 
-  font-size: 22px;
+  font-size: 26px;
+  text-align: left;
 }
 .filtres-form input[type=checkbox]:checked + label:before {
   content: "\2611";
@@ -439,20 +441,28 @@ input[type=number] {
 .filtres-form {
   color: #ffffff;
 }
-.infrastructure {
-  box-sizing: border-box;
-  width: 320px;
-  padding: 30px 70px;
+.filtres-form h2 {
+  margin-bottom: 28px;
 }
-.type-housing {
-  box-sizing: border-box;
-  width: 340px;
-  padding: 30px 0;
-}
+.infrastructure,
+.type-housing,
 .cost-day {
   box-sizing: border-box;
+}
+.infrastructure {
+  width: 320px;
+  padding: 14px 72px;
+}
+.checkbox {
+  margin-bottom: 11px;
+}
+.type-housing {
+  width: 340px;
+  padding: 14px 5px;
+}
+.cost-day {
   width: 540px;
-  padding: 30px 150px;
+  padding: 14px 145px;
 }
 .range {
   width: 320px;
@@ -480,16 +490,70 @@ input[type=number] {
   font-size: 30px;
   line-height: 24px;
 }
+.hotels-sort-info {
+  -webkit-align-items: center;
+          align-items: center;
+  min-height: 87px;
+
+  border-bottom: 1px solid #e5e5e5;
+}
+.hotels-found-count {
+  width: 220px;
+}
+.hotels-sort-type {
+  width: 850px;
+}
+.hotels-sort-type ul {
+  margin-top: 21px;
+  margin-left: 6px;
+  padding: 0;
+
+  line-height: 18px;
+}
+.hotels-sort-rating {
+  width: 130px;
+}
+.icon-sort {
+  margin-top: 21px;
+}
 .hotels-found-count h3 {
+  margin-left: 72px;
+
   font-size: 21px;
   line-height: 26px;
 }
 .hotels-found {
   -webkit-flex-wrap: wrap;
           flex-wrap: wrap;
+  -webkit-align-items: center;
+          align-items: center;
 }
 .hotels-found-item {
+  -webkit-align-items: center;
+          align-items: center;
   width: 100%;
+  min-height: 150px;
+
+  border-bottom: 1px solid #e5e5e5;
+}
+.hotels-found-image {
+  width: 230px;
+  margin-top: 25px;
+  margin-left: 70px;
+}
+.hotels-found-info {
+  width: 775px;
+}
+.hotels-found-rating {
+  width: 195px;
+  min-height: 90px;
+}
+.icons-rating {
+  margin-bottom: 40px;
+}
+.hotels-found-more,
+.hotels-found-book {
+  width: 110px;
 }
 .btn-more,
 .btn-book {
@@ -545,8 +609,13 @@ input[type=number] {
 }
 .hotels-sort-type-title,
 .sort-item {
+  margin-top: 21px;
+  margin-right: 18px;
+  margin-left: 16px;
+
+  font-weight: bold;
   font-size: 12px;
-  line-height: 18px;
+  line-height: 26px;
 }
 .sort-item {
   color: #b2b2b2;
@@ -585,4 +654,10 @@ input[type=number] {
   color: #666666;
 
   background-color: #f2f2f2;
+}
+
+input[type="checkbox"] + label {
+  min-height: 20px;
+
+  line-height: 20px;
 }

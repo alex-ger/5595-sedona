@@ -37,21 +37,45 @@
         <form class="filtres-form" action="https://echo.htmlacademy.ru" method="post">
           <div class="infrastructure">
             <h2>Инфраструктура:</h2>
-            <input type="checkbox" name="check" id="pool" checked>
-            <label for="pool">Бассейн</label> <br>
-            <input type="checkbox" name="check" id="parking">
-            <label for="parking">Парковка</label> <br>
-            <input type="checkbox" name="check" id="wi-fi">
-            <label for="wi-fi">Wi-fi</label>
+            <div class="checkbox">
+              <input type="checkbox" name="check" id="pool" checked>
+              <label class="icon-check" for="pool">
+                <span>Бассейн</span>
+              </label>
+            </div>
+            <div class="checkbox">
+              <input type="checkbox" name="check" id="parking">
+              <label class="icon-check" for="parking">
+                <span>Парковка</span>
+              </label>
+            </div>
+            <div class="checkbox">
+              <input type="checkbox" name="check" id="wi-fi">
+              <label class="icon-check" for="wi-fi">
+                <span>Wi-fi</span>
+              </label>
+            </div>
           </div>
           <div class="type-housing">
             <h2>Тип жилья:</h2>
-            <input type="checkbox" name="hotel" id="hotel" checked>
-            <label for="hotel">Гостиница</label> <br>
-            <input type="checkbox" name="motel" id="motel" checked>
-            <label for="motel">Мотель</label><br>
-            <input type="checkbox" name="apartments" id="apartments" checked>
-            <label for="apartments">Апартаменты</label>
+            <div class="checkbox">
+              <input type="checkbox" name="hotel" id="hotel" checked>
+              <label class="icon-check" for="hotel">
+                <span>Гостиница</span>
+              </label>
+            </div>
+            <div class="checkbox">
+              <input type="checkbox" name="motel" id="motel" checked>
+              <label class="icon-check" for="motel">
+                <span>Мотель</span>
+              </label>
+            </div>
+            <div class="checkbox">
+              <input type="checkbox" name="apartments" id="apartments" checked>
+              <label class="icon-check" for="apartments">
+                <span>Апартаменты</span>
+              </label>
+            </div>
           </div>
           <div class="cost-day">
             <h2>стоимость в сутки (Р):</h2>
@@ -59,7 +83,9 @@
               <div class="range-zero">от 0</div>
               <div class="range-max">до 3000</div>
             </div>
-            <input class="range" min="0" max="50000" type="range">
+            <div class="range-block">
+              <input class="range" min="0" max="50000" type="range">
+            </div>
             <button class="btn btn-cost-day" type="submit">Показать</button>
           </div>
         </form>
@@ -83,8 +109,10 @@
           </ul>
         </div>
         <div class="hotels-sort-rating">
-          <a class="icon-up-dir" href="#"></a>
-          <a class="icon-down-dir icon-sort-active" href="#"></a>
+          <div class="icon-sort">
+            <a class="icon-up-dir" href="#"></a>
+            <a class="icon-down-dir icon-sort-active" href="#"></a>
+          </div>
         </div>
       </section>
       <section class="hotels-found">
@@ -96,21 +124,27 @@
             <h1>
               <a href="#">Amara resort &#38; spa</a>
             </h1>
-            <div class="hotels-found-more">
-              <span>Гостиница</span>
-              <a class="btn btn-more" href="#">Подробнее</a>
-            </div>
-            <div class="hotels-found-book">
-              <span>от 3500 Р.</span>
-              <a class="btn btn-book" href="#">Забронировать</a>
+            <div class="hotels-found-action">
+              <div class="hotels-found-more">
+                <span>Гостиница</span>
+                <a class="btn btn-more" href="#">Подробнее</a>
+              </div>
+              <div class="hotels-found-book">
+                <span>от 3500 Р.</span>
+                <a class="btn btn-book" href="#">Забронировать</a>
+              </div>
             </div>
           </div>
           <div class="hotels-found-rating">
-            <span class="icon-star"></span>
-            <span class="icon-star"></span>
-            <span class="icon-star"></span>
-            <span class="icon-star"></span>
-            <span class="hotels-count-rating">Рейтинг: 8,5</span>
+            <div class="icons-rating">
+              <span class="icon-star"></span>
+              <span class="icon-star"></span>
+              <span class="icon-star"></span>
+              <span class="icon-star"></span>
+            </div>
+            <div class="badge-rating">
+              <span class="hotels-count-rating">Рейтинг: 8,5</span>
+            </div>
           </div>
         </article>
         <article class="hotels-found-item">
@@ -121,20 +155,25 @@
             <h1>
               <a href="#">Desert quail inn</a>
             </h1>
-            <div class="hotels-found-more">
-              <span>Мотель</span>
-              <a class="btn btn-more" href="#">Подробнее</a>
-            </div>
-            <div class="hotels-found-book">
-              <span>от 2000 Р.</span>
-              <a class="btn btn-book" href="#">Забронировать</a>
+            <div class="hotels-found-action">
+              <div class="hotels-found-more">
+                <span>Мотель</span>
+                <a class="btn btn-more" href="#">Подробнее</a>
+              </div>
+              <div class="hotels-found-book">
+                <span>от 2000 Р.</span>
+                <a class="btn btn-book" href="#">Забронировать</a>
+              </div>
             </div>
           </div>
           <div class="hotels-found-rating">
-            <span class="icon-star"></span>
-            <span class="icon-star"></span>
-            <span class="hotels-count-rating">Рейтинг: 8,9</span>
-          </div>
+            <div class="icons-rating">
+              <span class="icon-star"></span>
+              <span class="icon-star"></span>
+            </div>
+            <div class="badge-rating">
+              <span class="hotels-count-rating">Рейтинг: 8,9</span>
+            </div>
         </article>
         <article class="hotels-found-item">
           <div class="hotels-found-image">
@@ -144,20 +183,26 @@
             <h1>
               <a href="#">Villas-at-poco-diablo</a>
             </h1>
-            <div class="hotels-found-more">
-              <span>Апартаменты</span>
-              <a class="btn btn-more" href="#">Подробнее</a>
-            </div>
-            <div class="hotels-found-book">
-              <span>от 4000 Р.</span>
-              <a class="btn btn-book" href="#">Забронировать</a>
+            <div class="hotels-found-action">
+              <div class="hotels-found-more">
+                <span>Апартаменты</span>
+                <a class="btn btn-more" href="#">Подробнее</a>
+              </div>
+              <div class="hotels-found-book">
+                <span>от 4000 Р.</span>
+                <a class="btn btn-book" href="#">Забронировать</a>
+              </div>
             </div>
           </div>
           <div class="hotels-found-rating">
-            <span class="icon-star"></span>
-            <span class="icon-star"></span>
-            <span class="icon-star"></span>
-            <span class="hotels-count-rating">Рейтинг: 9,2</span>
+            <div class="icons-rating">
+              <span class="icon-star"></span>
+              <span class="icon-star"></span>
+              <span class="icon-star"></span>
+            </div>
+            <div class="badge-rating">
+              <span class="hotels-count-rating">Рейтинг: 9,2</span>
+            </div>
           </div>
         </article>
       </section>
