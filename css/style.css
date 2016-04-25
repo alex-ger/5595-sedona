@@ -1,8 +1,66 @@
+@font-face {
+  font-weight: normal;
+  font-family: "symbols-sedona";
+  font-style: normal;
+
+  src: url("../fonts/symbols-sedona.woff") format("woff"),
+  url("../fonts/symbols-sedona.woff2") format("woff2");
+}
+
+[class^="icon-"]::before,
+[class*=" icon-"]::before {
+  display: inline-block;
+  width: 1em;
+  margin-right: 0.2em;
+  margin-left: 0.2em;
+
+  font-weight: normal;
+  line-height: 1em;
+  font-family: "symbols-sedona";
+  text-align: center;
+  text-transform: none;
+  text-decoration: inherit;
+  font-style: normal;
+  font-variant: normal;
+
+  speak: none;
+}
+
+.icon-facebook::before {
+  content: "\66";
+} /* "f" */
+.icon-twitter::before {
+  content: "\74";
+} /* "t" */
+.icon-up-dir::before {
+  content: "\25b2";
+} /* "▲" */
+.icon-down-dir::before {
+  content: "\25bc";
+} /* "▼" */
+.icon-star::before {
+  content: "\2605";
+} /* "★" */
+.icon-check-off::before {
+  content: "\2610";
+} /* "☐" */
+.icon-check-on::before {
+  content: "\2611";
+} /* "☑" */
+.icon-calendar::before {
+  content: "\e800";
+} /* "" */
+.icon-plus::before {
+  content: "\e801";
+} /* "" */
+.icon-minus::before {
+  content: "\e802";
+} /* "" */
+.icon-youtube::before {
+  content: "\f39e";
+} /* "" */
+
 body {
-  display: -webkit-flex;
-  display:         flex;
-  -webkit-justify-content: center;
-          justify-content: center;
   width: 100%;
 
   font-weight: normal;
@@ -16,6 +74,7 @@ body {
 }
 a {
   color: #000000;
+  text-decoration: none;
 }
 h1,
 h2,
@@ -46,7 +105,10 @@ footer,
   display:         flex;
 }
 .container {
+  position: relative;
+
   width: 1200px;
+  margin: 0 auto;
 
   background-color: #ffffff;
   box-shadow: 0 5px 15px 0 rgba(0,1,1,0.2);
@@ -106,6 +168,7 @@ footer,
   margin: 0;
   padding: 0;
 
+  background-color: #47749e;
   background-image: url("../img/main-bg.png");
   background-repeat: no-repeat;
   background-size: 100%;
@@ -247,6 +310,7 @@ footer,
   margin: 0;
   padding: 0;
 
+  background-color: #cbdda9;
   background-image: url("../img/map.png");
   background-repeat: no-repeat;
   background-size: 100%;
@@ -327,7 +391,7 @@ footer,
 .btn-search-form:active {
   color: #81b3d2;
 }
-input[type=number] {
+.map-form input[type=text] {
   width: 38px;
   height: 38px;
   margin: 0;
@@ -417,15 +481,15 @@ input[type=number] {
 .social:active.icon-youtube {
   color: rgba(255, 255, 255, 0.4);
 }
-.footer-copyright .logo-htmlacademy svg {
+.logo-htmlacademy svg {
   fill: #000000;
   stroke: #000000;
 }
-.footer-copyright .logo-htmlacademy:hover svg {
+.logo-htmlacademy:hover svg {
   fill: #81b3d2;
   stroke: #81b3d2;
 }
-.footer-copyright .logo-htmlacademy:active svg {
+.logo-htmlacademy:active svg {
   fill: #bdbbbc;
   stroke: #bdbbbc;
 }
@@ -434,6 +498,7 @@ input[type=number] {
   margin: 0;
   padding: 0;
 
+  background-color: #4178a1;
   background-image: url("../img/filtres-bg-hotels.png");
   background-repeat: no-repeat;
   background-size: 100%;
@@ -551,9 +616,12 @@ input[type=number] {
 .icons-rating {
   margin-bottom: 40px;
 }
-.hotels-found-more,
-.hotels-found-book {
+.hotels-found-more {
   width: 110px;
+}
+.hotels-found-book {
+  width: 142px;
+  margin-left: 5px;
 }
 .btn-more,
 .btn-book {
@@ -613,7 +681,6 @@ input[type=number] {
   margin-right: 18px;
   margin-left: 16px;
 
-  font-weight: bold;
   font-size: 12px;
   line-height: 26px;
 }
