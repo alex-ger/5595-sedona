@@ -110,6 +110,23 @@ li {
 p {
   line-height: 21px;
 }
+.btn,
+input[type="text"] {
+  border: none;
+  outline: none;
+}
+.btn {
+  text-align: center;
+  text-transform: uppercase;
+}
+.btn:hover,
+.btn:active {
+  outline: none;
+  cursor: pointer;
+}
+.btn:active {
+  outline: none;
+}
 section,
 article,
 footer,
@@ -357,22 +374,10 @@ footer,
 
   line-height: 24px;
 }
-.btn {
-  text-align: center;
-  text-transform: uppercase;
-
-  border: none;
-  outline: none;
-}
-.btn:hover,
-.btn:active {
-  cursor: pointer;
-}
-.btn:active {
-  outline: none;
-}
 .btn-search-hotels {
-  padding: 30px 139px;
+  display: block;
+  width: 568px;
+  padding: 30px 0;
 
   font-weight: bold;
   font-size: 21px;
@@ -432,7 +437,7 @@ footer,
 .family-count {
   margin-bottom: 55px;
 }
-input[type="date"] {
+.input-date input[type=text] {
   width: 325px;
   padding: 5px 10px 4px 8px;
 
@@ -442,11 +447,11 @@ input[type="date"] {
   border: 2px solid rgba(255, 255, 255, 0);
   outline: none;
 }
-.map-form input[type="date"]:hover {
+.input-date input[type=text]:hover {
   background-color: #ebebeb;
 }
-.map-form input[type="date"]:active,
-.map-form input[type="date"]:focus {
+.input-date input[type=text]:active,
+.input-date input[type=text]:focus {
   background-color: #ffffff;
   border: 2px solid #e5e5e5;
 }
@@ -454,9 +459,10 @@ input[type="date"] {
   font-size: 21px;
   color: #c2c2c2;
 }
-.iframe-map{
+.iframe-map {
   width: 100%;
   height: 594px;
+
   border: 0;
 }
 input[type=checkbox] {
@@ -490,8 +496,8 @@ input[type="checkbox"] + label {
   color: #6a6a6a;
 }
 .btn-search-form,
-.map-form input[type=text],
-input[type="date"] {
+.family-count input[type=text],
+.input-date input[type=text] {
   background-color: #f2f2f2;
 }
 .btn-search-form {
@@ -505,24 +511,20 @@ input[type="date"] {
 .btn-search-form:active {
   color: #81b3d2;
 }
-input[type=text] {
-  margin: 0;
-  padding: 0;
-
-  text-align: center;
-
-  border: none;
-  outline: none;
-}
-.map-form input[type=text] {
+.family-count input[type=text] {
   width: 38px;
   height: 38px;
+  padding: 0;
 
   font-weight: bold;
+  text-align: center;
 }
 .btn-find {
+  display: block;
   width: 100%;
+  max-width: 461px;
   padding: 15px 0;
+  overflow: hidden;
 
   font-weight: bold;
   font-size: 21px;
@@ -651,7 +653,7 @@ input[type=text] {
 }
 .range-count {
   width: 315px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   margin-left: 7px;
   padding: 2px 0 4px 0;
 
@@ -695,8 +697,65 @@ input[type=text] {
   width: 42px;
 }
 .range-block {
-  margin-bottom: 16px;
+  position: relative;
+
+  width: 315px;
+  margin-bottom: 33px;
   margin-left: 8px;
+}
+.range-block .scale {
+  height: 2px;
+
+  background: rgba(255, 255, 255, 0.3);
+}
+.range-block .bar {
+  width: 80%;
+  height: 2px;
+
+  background: #ffffff;
+}
+.range-toggle {
+  position: absolute;
+  top: -9px;
+
+  width: 4px;
+  height: 4px;
+
+  background: #ababab;
+  border: 8px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+  cursor: pointer;
+}
+.range-toggle:hover {
+  background: #1c4f80;
+}
+.range-toggle-min {
+  left: 0;
+}
+.range-toggle-max {
+  left: 80%;
+}
+.btn-transparent {
+  display: block;
+  margin: 0 auto;
+  padding: 6px 35px;
+
+  font-size: 14px;
+  line-height: 20px;
+  color: #ffffff;
+  text-transform: uppercase;
+
+  background: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+  outline: none;
+  cursor: pointer;
+}
+.btn-transparent:hover {
+  color: #000000;
+
+  background: #ffffff;
 }
 input[type="range"] {
   width: 320px;
@@ -803,13 +862,18 @@ input[type="range"]:hover {
 .btn-book {
   display: block;
   margin-top: 13px;
+  overflow: hidden;
 
   font-weight: bold;
 }
 .btn-more {
+  max-width: 110px;
+
   background-color: #81b3d2;
 }
 .btn-book {
+  max-width: 142px;
+
   background-color: #766357;
 }
 .btn-more:hover {
@@ -875,9 +939,9 @@ input[type="range"]:hover {
 .active-sort:hover {
   color: #81b3d2;
 }
-.hotels-found-info a:hover {
+/*.hotels-found-info a:hover {
   color: #81b3d2;
-}
+}*/
 .hotels-found-info a:active {
   color: #cacaca;
 }

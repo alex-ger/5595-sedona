@@ -37,19 +37,19 @@
           <div class="infrastructure">
             <h2>Инфраструктура:</h2>
             <div class="checkbox">
-              <input type="checkbox" name="check" id="pool" checked>
+              <input type="checkbox" name="pool" id="pool" checked>
               <label class="icon-check" for="pool">
                 <span>Бассейн</span>
               </label>
             </div>
             <div class="checkbox">
-              <input type="checkbox" name="check" id="parking" disabled>
+              <input type="checkbox" name="parking" id="parking" disabled>
               <label class="icon-check" for="parking">
                 <span>Парковка</span>
               </label>
             </div>
             <div class="checkbox">
-              <input type="checkbox" name="check" id="wi-fi">
+              <input type="checkbox" name="wi-fi" id="wi-fi">
               <label class="icon-check" for="wi-fi">
                 <span>Wi-fi</span>
               </label>
@@ -89,7 +89,11 @@
               </div>
             </div>
             <div class="range-block">
-              <input class="range" min="0" max="50000" type="range">
+              <div class="scale">
+                <div class="bar"></div>
+              </div>
+              <div class="range-toggle range-toggle-min"></div>
+              <div class="range-toggle range-toggle-max"></div>
             </div>
             <button class="btn btn-cost-day" type="submit">Показать</button>
           </div>
