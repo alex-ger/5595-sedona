@@ -77,10 +77,16 @@
             </div>
           </div>
           <div class="cost-day">
-            <h2>стоимость в сутки (Р):</h2>
+            <h2>Cтоимость в сутки (Р):</h2>
             <div class="range-count">
-              <div class="range-zero">от 0</div>
-              <div class="range-max">до 3000</div>
+              <div class="range-zero">
+                <span>от</span>
+                <input type="text" name="min-range" id="min-range" value="0">
+              </div>
+              <div class="range-max">
+                <span>до</span>
+                <input type="text" name="max-range" id="max-range" value="3000">
+              </div>
             </div>
             <div class="range-block">
               <input class="range" min="0" max="50000" type="range">
