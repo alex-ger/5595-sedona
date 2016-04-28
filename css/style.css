@@ -159,36 +159,42 @@ footer,
 
   -ms-flex-align: center;
 }
+.main-footer {
+  -webkit-justify-content: space-around;
+          justify-content: space-around;
+
+  -ms-flex-pack: distribute;
+}
 .container {
   position: relative;
 
   width: 1200px;
   margin: 0 auto;
 
-  background-color: #ffffff;
   box-shadow: 0 5px 15px 0 rgba(0,1,1,0.2);
+}
+.container,
+.main-header,
+.map-form {
+  background-color: #ffffff;
 }
 .main-header {
   position: relative;
 
   margin-bottom: -56px;
-
-  background-color: #ffffff;
 }
 .main-navigation ul {
-  min-height: 56px;
   margin: 0;
-  padding: 0;
+  padding: 15px 0;
 }
 .main-navigation a {
   font-weight: bold;
-  color: #000000;
   text-decoration: none;
 }
-.main-navigation li:nth-child(1) a {
-  padding: 19px 77px 19px 72px;
+.main-navigation li:nth-child(1) {
+  margin-right: 3px;
 }
-.main-navigation li:nth-child(2) a {
+/*.main-navigation li:nth-child(2) a {
   padding: 19px 70px 19px 70px;
 }
 .main-navigation li:nth-child(3) a {
@@ -196,9 +202,14 @@ footer,
 }
 .main-navigation li:nth-child(4) a {
   padding: 19px 72px 19px 88px;
+}*/
+.main-navigation li {
+  width: 20%;
+
+  text-align: center;
 }
 .main-navigation li:nth-child(2) {
-  margin-right: 240px;
+  margin-right: 242px;
 }
 .main-navigation a:hover {
   color: #81b3d2;
@@ -272,13 +283,22 @@ footer,
   margin-bottom: 52px;
 }
 .reasons {
-  min-height: 256px;
   margin: 0;
   padding: 0;
 }
-.reasons-blue {
+.filtres h2,
+.reasons-blue,
+.btn-cost-day,
+.filtres-form,
+.icon-twitter,
+.icon-facebook,
+.icon-youtube,
+.btn,
+.btn-search-hotels,
+.btn-find {
   color: #ffffff;
-
+}
+.reasons-blue {
   background-color: #81b3d2;
 }
 .reasons-blue-content {
@@ -290,7 +310,8 @@ footer,
   height: 256px;
 }
 .features {
-  min-height: 330px;
+  padding-top: 55px;
+  padding-bottom: 55px;
 }
 .features-item,
 .reason-item {
@@ -307,20 +328,19 @@ footer,
 .reasons-content span {
   line-height: 35px;
 }
-.reasons-grey .reason-item {
-  min-height: 195px;
-}
 .reasons-grey span {
   line-height: 35px;
 }
 .reasons-grey {
+  padding-top: 31px;
+  padding-bottom: 43px;
+
   background-color: #eeeeee;
 }
 .reasons-grey h2 {
   color: #000000;
 }
 .search-hotels {
-  min-height: 290px;
   margin: 0;
   padding: 0;
 }
@@ -337,15 +357,16 @@ footer,
 .search-hotels h3 {
   margin: 0;
   margin-top: 57px;
-  margin-bottom: 35px;
+  margin-bottom: 30px;
 }
 .search-hotels p {
   margin: 0;
   margin-bottom: 48px;
+
+  line-height: 24px;
 }
 .btn {
   text-align: center;
-  color: #ffffff;
   text-transform: uppercase;
   text-decoration: none;
 
@@ -365,14 +386,12 @@ footer,
   font-weight: bold;
   font-size: 21px;
   line-height: 26px;
-  color: #ffffff;
 
   background-color: #766357;
 }
 .map {
-  min-height: 593px;
   margin: 0;
-  padding: 0;
+  padding-bottom: 198px;
 
   background-color: #cbdda9;
   background-image: url("../img/map.png");
@@ -382,10 +401,7 @@ footer,
 .map-form {
   box-sizing: border-box;
   width: 567px;
-  height: 400px;
-  padding: 53px 50px 60px 56px;
-
-  background-color: #ffffff;
+  padding: 53px 50px 57px 56px;
 }
 .map-form label {
   font-weight: bold;
@@ -413,13 +429,12 @@ footer,
 .family-count {
   margin-bottom: 55px;
 }
-.map-form input[type="date"] {
+input[type="date"] {
   width: 325px;
   padding: 5px 10px 4px 8px;
 
   font-weight: bold;
 
-  background-color: #f2f2f2;
   border: none;
   border: 2px solid rgba(255, 255, 255, 0);
   outline: none;
@@ -436,8 +451,11 @@ footer,
   font-size: 21px;
   color: #c2c2c2;
 }
-.filtres-form input[type=checkbox] {
+input[type=checkbox] {
   display: none;
+}
+input[type="checkbox"] + label {
+  line-height: 20px;
 }
 .filtres-form label {
   display: inline-block;
@@ -463,6 +481,11 @@ footer,
 .filtres-form input[type=checkbox]:disabled + label:before {
   color: #6a6a6a;
 }
+.btn-search-form,
+input[type=text],
+input[type="date"] {
+  background-color: #f2f2f2;
+}
 .btn-search-form {
   padding: 6px 9.2px;
 
@@ -474,7 +497,7 @@ footer,
 .btn-search-form:active {
   color: #81b3d2;
 }
-.map-form input[type=text] {
+input[type=text] {
   width: 38px;
   height: 38px;
   margin: 0;
@@ -483,7 +506,6 @@ footer,
   font-weight: bold;
   text-align: center;
 
-  background-color: #dddddd;
   border: none;
   outline: none;
 }
@@ -492,56 +514,32 @@ footer,
 
   font-weight: bold;
   font-size: 21px;
-  color: #ffffff;
 
   background-color: #81b3d2;
 }
 .btn-find:hover {
   background-color: #669ec0;
 }
-.btn-find:active {
+.btn-find:active,
+.btn-more:active,
+.social:active {
   background-color: #5496bd;
 }
-.btn-find:active.btn-find {
+.btn-find:active.btn-find,
+.btn-more:active.btn-more,
+.btn-book:active.btn-book,
+.social:active.icon-twitter,
+.social:active.icon-facebook,
+.social:active.icon-youtube {
   color: rgba(255, 255, 255, 0.4);
 }
 .main-footer {
-  -webkit-justify-content: space-around;
-          -ms-flex-pack: distribute;
-      justify-content: space-around;
-  min-height: 120px;
   margin: 0;
   padding: 0;
+  padding-top: 35px;
+  padding-bottom: 37px;
 
   background-color: rgba(255, 255, 255, 0.9);
-
-  -ms-flex-pack: distribute;
-  -ms-flex-pack: distribute;
-  -ms-flex-pack: distribute;
-  -ms-flex-pack: distribute;
-  -ms-flex-pack: distribute;
-  -ms-flex-pack: distribute;
-  -ms-flex-pack: distribute;
-  -ms-flex-pack: distribute;
-  -ms-flex-pack: distribute;
-  -ms-flex-pack: distribute;
-  -ms-flex-pack: distribute;
-  -ms-flex-pack: distribute;
-  -ms-flex-pack: distribute;
-  -ms-flex-pack: distribute;
-  -ms-flex-pack: distribute;
-  -ms-flex-pack: distribute;
-  -ms-flex-pack: distribute;
-  -ms-flex-pack: distribute;
-  -ms-flex-pack: distribute;
-  -ms-flex-pack: distribute;
-  -ms-flex-pack: distribute;
-  -ms-flex-pack: distribute;
-  -ms-flex-pack: distribute;
-  -ms-flex-pack: distribute;
-  -ms-flex-pack: distribute;
-  -ms-flex-pack: distribute;
-  -ms-flex-pack: distribute;
 }
 .footer-margin-up {
   margin-top: -120px;
@@ -582,21 +580,12 @@ footer,
   line-height: 48px;
   vertical-align: middle;
   text-align: center;
-  color: #ffffff;
 }
 .icon-youtube {
   font-size: 23px;
 }
 .social:hover {
   background-color: #669ec0;
-}
-.social:active {
-  background-color: #5496bd;
-}
-.social:active.icon-twitter,
-.social:active.icon-facebook,
-.social:active.icon-youtube {
-  color: rgba(255, 255, 255, 0.4);
 }
 .logo-htmlacademy svg {
   vertical-align: middle;
@@ -614,7 +603,6 @@ footer,
 }
 /*Стили страницы поиска отелей*/
 .filtres {
-  min-height: 215px;
   margin: 0;
   padding: 0;
 
@@ -625,8 +613,6 @@ footer,
 }
 .filtres-form {
   margin-top: 56px;
-
-  color: #ffffff;
 }
 .filtres-form h2 {
   margin-bottom: 22px;
@@ -683,15 +669,17 @@ footer,
   margin-bottom: 16px;
   margin-left: 8px;
 }
-.range {
+input[type="range"]{
   width: 320px;
+}
+input[type="range"]:hover{
+  cursor: pointer;
 }
 .btn-cost-day {
   margin-left: 92px;
   padding: 5px 35px;
 
   line-height: 21px;
-  color: #ffffff;
 
   background-color: rgba(255, 255, 255, 0);
   border: 2px solid #ffffff;
@@ -704,14 +692,14 @@ footer,
 }
 .filtres h2 {
   font-size: 16px;
-  color: #ffffff;
 }
 .search-hotels h3 {
   font-size: 30px;
   line-height: 24px;
 }
 .hotels-sort-info {
-  min-height: 87px;
+  padding-top: 10px;
+  padding-bottom: 9px;
 
   border-bottom: 1px solid #e5e5e5;
 }
@@ -745,7 +733,8 @@ footer,
 }
 .hotels-found-item {
   width: 100%;
-  min-height: 150px;
+  padding-top: 30px;
+  padding-bottom: 30px;
 
   border-bottom: 1px solid #e5e5e5;
 }
@@ -756,11 +745,9 @@ footer,
 }
 .hotels-found-info {
   width: 800px;
-  min-height: 90px;
 }
 .hotels-found-rating {
   width: 190px;
-  min-height: 90px;
 }
 .icons-rating {
   width: 112px;
@@ -795,20 +782,11 @@ footer,
 .btn-more:hover {
   background-color: #669ec0;
 }
-.btn-more:active {
-  background-color: #5496bd;
-}
-.btn-more:active.btn-more {
-  color: rgba(255, 255, 255, 0.4);
-}
 .btn-book:hover {
   background-color: #604e43;
 }
 .btn-book:active {
   background-color: #503e33;
-}
-.btn-book:active.btn-book {
-  color: rgba(255, 255, 255, 0.4);
 }
 .icon-star {
   font-size: 19px;
@@ -830,12 +808,8 @@ footer,
   color: #000000;
 }
 .icon-up-dir:active,
-.icon-down-dir:active {
-  color: #81b3d2;
-}
-.icon-sort-active {
-  color: #81b3d2;
-}
+.icon-down-dir:active,
+.icon-sort-active,
 .icon-sort-active:hover {
   color: #81b3d2;
 }
@@ -885,10 +859,4 @@ footer,
   color: #666666;
 
   background-color: #f2f2f2;
-}
-
-input[type="checkbox"] + label {
-  min-height: 20px;
-
-  line-height: 20px;
 }
