@@ -420,12 +420,12 @@ footer,
 .map-form-show {
   display: block;
 
-  -webkit-animation: bounce 0.6s;
-          animation: bounce 0.6s;
+  -webkit-animation: bounce 0.5s;
+          animation: bounce 0.5s;
 }
 .modal-error {
-          -webkit-animation: erorr-form  0.4s;
-                  animation: erorr-form  0.4s;
+          -webkit-animation: erorr-form  0.5s;
+                  animation: erorr-form  0.5s;
 }
 @-webkit-keyframes bounce {
   0% {
@@ -468,15 +468,15 @@ footer,
   50%,
   70%,
   90% {
-    -webkit-transform: translateX(-10px);
-            transform: translateX(-10px);
+    -webkit-transform: translateX(-8px);
+            transform: translateX(-8px);
   }
   20%,
   40%,
   60%,
   80% {
-    -webkit-transform: translateX(10px);
-            transform: translateX(10px);
+    -webkit-transform: translateX(8px);
+            transform: translateX(8px);
   }
 }
 .map-form label {
@@ -1028,9 +1028,6 @@ input[type="range"]:hover {
 .active-sort:hover {
   color: #81b3d2;
 }
-/*.hotels-found-info a:hover {
-  color: #81b3d2;
-}*/
 .hotels-found-info a:active {
   color: #cacaca;
 }
