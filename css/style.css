@@ -1054,7 +1054,10 @@ input[type="range"]:hover {
   color: #81b3d2;
 }
 .hotels-found-info h1 a:hover {
-  color: #81b3d2
+  color: #81b3d2;
+}
+.hotels-found-info h1 a:active {
+  color: #cacaca;
 }
 .hotels-found-info a:active {
   color: #cacaca;
