@@ -97,7 +97,7 @@
       <section class="search-hotels">
         <h3>Заинтересовались?</h3>
         <p>Укажите предполагаемые даты поездки, <br> и мы покажем вам лучшие предложения гостиниц в седоне</p>
-        <a class="btn btn-search-hotels" href="#">
+        <a class="btn btn-search-hotels" href="form.html">
           Поиск гостиницы в Седоне
         </a>
       </section>
@@ -161,56 +161,6 @@
           </a>
       </footer>
     </div>
-    <script>
-      var link = document.querySelector(".btn-search-hotels");
-
-      var popup = document.querySelector(".map-form");
-      var close = document.querySelector(".close");
-      var datecheck = popup.querySelector("[name=datecheck]");
-      var datecheckout = popup.querySelector("[name=datecheckout]");
-      var grownups = popup.querySelector("[name=grownups]");
-      var children = popup.querySelector("[name=children]");
-
-      var flag =0;
-
-          if(flag === 0){
-            link.addEventListener("click", function(event) {
-              event.preventDefault();
-              popup.classList.add("map-form-show");
-              flag=1;
-            });
-          }
-
-          if(flag === 1) {
-             close.addEventListener("click", function(event) {
-              event.preventDefault();
-              popup.classList.remove("map-form-show");
-              popup.classList.remove("modal-error");
-              flag=0;
-            });
-          }
-
-      form.addEventListener("submit", function(event) {
-        if (!datecheck.value || !datecheckout.value) {
-          event.preventDefault();
-          popup.classList.remove("modal-error");
-          popup.offsetWidth = popup.offsetWidth;
-          popup.classList.add("modal-error");
-        }else {
-          localStorage.setItem("datecheck", datecheck.value);
-        }
-      });
-
-      window.addEventListener("keydown", function(event) {
-        if (event.keyCode === 27) {
-          if (popup.classList.contains("map-form-show")) {
-            popup.classList.remove("map-form-show");
-            popup.classList.remove("modal-error");
-          }
-        }
-      });
-
-    </script>
-    <!-- <script src="js/scripts.js"></script> -->
+    <script src="js/sсripts.js"></script>
   </body>
 </html>

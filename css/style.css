@@ -9,7 +9,7 @@
 }
 
 [class^="icon-"]::before,
-[class*=" icon-"]::before {
+[class*="icon-"]::before {
   display: inline-block;
   width: 1em;
   margin-right: 0.2em;
@@ -118,7 +118,14 @@ input[type="text"] {
   outline: none;
 }
 input[type="text"] {
+  color: #000000;
   text-transform: uppercase;
+}
+::-webkit-input-placeholder,
+::-moz-placeholder,
+:-moz-placeholder,
+:-ms-input-placeholder {
+  color: #000000;
 }
 .btn {
   text-align: center;
@@ -293,6 +300,9 @@ footer,
   margin-bottom: 52px;
 }
 .reasons {
+  position: relative;
+  z-index: 999;
+
   margin: 0;
   padding: 0;
 }
@@ -355,8 +365,13 @@ footer,
   color: #000000;
 }
 .search-hotels {
+  position: relative;
+  z-index: 999;
+
   margin: 0;
   padding: 0;
+
+  background-color: #ffffff;
 }
 .search-hotels h3,
 .search-hotels h3 {
@@ -420,12 +435,14 @@ footer,
 .map-form-show {
   display: block;
 
-  -webkit-animation: bounce 0.5s;
-          animation: bounce 0.5s;
+  -webkit-animation: bounce 0.5s ease-in-out;
+          animation: bounce 0.5s ease-in-out;
 }
-.modal-error {
-          -webkit-animation: erorr-form  0.5s;
-                  animation: erorr-form  0.5s;
+.map-form-close {
+  display: block;
+
+  -webkit-animation: back-show 0.5s ease-in-out forwards;
+          animation: back-show 0.5s ease-in-out forwards;
 }
 @-webkit-keyframes bounce {
   0% {
@@ -433,20 +450,20 @@ footer,
             transform: translate(-50%, -400px);
   }
   20% {
-    -webkit-transform: translate(-50%, 30px);
-            transform: translate(-50%, 30px);
+    -webkit-transform: translate(-50%, 10px);
+            transform: translate(-50%, 10px);
   }
   40% {
-    -webkit-transform: translate(-50%, 60px);
-            transform: translate(-50%, 60px);
+    -webkit-transform: translate(-50%, 40px);
+            transform: translate(-50%, 40px);
   }
   60% {
-    -webkit-transform: translate(-50%, 90px);
-            transform: translate(-50%, 90px);
+    -webkit-transform: translate(-50%, 70px);
+            transform: translate(-50%, 70px);
   }
   70% {
-    -webkit-transform: translate(-50%, 30px);
-            transform: translate(-50%, 30px);
+    -webkit-transform: translate(-50%, 20px);
+            transform: translate(-50%, 20px);
   }
   90% {
     -webkit-transform: translate(-50%, -10px);
@@ -457,26 +474,34 @@ footer,
             transform: translate(-50%, 0px);
   }
 }
-@-webkit-keyframes erorr-form {
-  0%,
-  100% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
+@-webkit-keyframes back-show {
+  0% {
+    -webkit-transform: translate(-50%, 0px);
+            transform: translate(-50%, 0px);
   }
-  10%,
-  30%,
-  50%,
-  70%,
+  20% {
+    -webkit-transform: translate(-50%, -10px);
+            transform: translate(-50%, -10px);
+  }
+  40% {
+    -webkit-transform: translate(-50%, 20px);
+            transform: translate(-50%, 20px);
+  }
+  60% {
+    -webkit-transform: translate(-50%, 70px);
+            transform: translate(-50%, 70px);
+  }
+  70% {
+    -webkit-transform: translate(-50%, 40px);
+            transform: translate(-50%, 40px);
+  }
   90% {
-    -webkit-transform: translateX(-8px);
-            transform: translateX(-8px);
+    -webkit-transform: translate(-50%, 10px);
+            transform: translate(-50%, 10px);
   }
-  20%,
-  40%,
-  60%,
-  80% {
-    -webkit-transform: translateX(8px);
-            transform: translateX(8px);
+  100% {
+    -webkit-transform: translate(-50%, -400px);
+            transform: translate(-50%, -400px);
   }
 }
 .map-form label {
@@ -1028,6 +1053,9 @@ input[type="range"]:hover {
 .active-sort:hover {
   color: #81b3d2;
 }
+.hotels-found-info h1 a:hover {
+  color: #81b3d2
+}
 .hotels-found-info a:active {
   color: #cacaca;
 }
@@ -1041,7 +1069,6 @@ input[type="range"]:hover {
 .range-count {
   position: relative;
 }
-
 .range-count::after {
   content: "";
   position: absolute;
