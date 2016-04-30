@@ -435,16 +435,16 @@ footer,
 .map-form-show {
   display: block;
 
-  -webkit-animation: bounce 0.6s ease-in-out;
-          animation: bounce 0.6s ease-in-out;
+  -webkit-animation: form-down 0.6s ease-in-out;
+          animation: form-down 0.6s ease-in-out;
 }
 .map-form-close {
   display: block;
 
-  -webkit-animation: back-show 0.5s ease-in-out forwards;
-          animation: back-show 0.5s ease-in-out forwards;
+  -webkit-animation: form-up 0.5s ease-in-out forwards;
+          animation: form-up 0.5s ease-in-out forwards;
 }
-@-webkit-keyframes bounce {
+@-webkit-keyframes form-down {
   0% {
     -webkit-transform: translate(-50%, -400px);
             transform: translate(-50%, -400px);
@@ -474,7 +474,7 @@ footer,
             transform: translate(-50%, 0px);
   }
 }
-@-webkit-keyframes back-show {
+@-webkit-keyframes form-up {
   0% {
     -webkit-transform: translate(-50%, 0px);
             transform: translate(-50%, 0px);
@@ -575,38 +575,6 @@ footer,
   height: 594px;
 
   border: 0;
-}
-input[type=checkbox] {
-  display: none;
-}
-input[type="checkbox"] + label {
-  line-height: 20px;
-}
-.infrastructure label,
-.type-housing label {
-  display: inline-block;
-  margin-right: 15px;
-
-  vertical-align: middle;
-
-  cursor: pointer;
-}
-.infrastructure label:before,
-.type-housing label:before {
-  content: "\2610";
-
-  margin-right: 10px;
-  margin-left: 0;
-
-  font-size: 26px;
-  vertical-align: middle;
-  text-align: left;
-}
-.filtres-form input[type=checkbox]:checked + label:before {
-  content: "\2611";
-}
-.filtres-form input[type=checkbox]:disabled + label:before {
-  color: #6a6a6a;
 }
 .btn-search-form,
 .family-count input[type=text],
@@ -726,6 +694,38 @@ input[type="checkbox"] + label {
   stroke: #bdbbbc;
 }
 /*Стили страницы поиска отелей*/
+input[type=checkbox] {
+  display: none;
+}
+input[type="checkbox"] + label {
+  line-height: 20px;
+}
+.infrastructure label,
+.type-housing label {
+  display: inline-block;
+  margin-right: 15px;
+
+  vertical-align: middle;
+
+  cursor: pointer;
+}
+.infrastructure label:before,
+.type-housing label:before {
+  content: "\2610";
+
+  margin-right: 10px;
+  margin-left: 0;
+
+  font-size: 26px;
+  vertical-align: middle;
+  text-align: left;
+}
+.filtres-form input[type=checkbox]:checked + label:before {
+  content: "\2611";
+}
+.filtres-form input[type=checkbox]:disabled + label:before {
+  color: #6a6a6a;
+}
 .filtres {
   margin: 0;
   padding: 0;
@@ -1056,9 +1056,7 @@ input[type="range"]:hover {
 .hotels-found-info h1 a:hover {
   color: #81b3d2;
 }
-.hotels-found-info h1 a:active {
-  color: #cacaca;
-}
+.hotels-found-info h1 a:active,
 .hotels-found-info a:active {
   color: #cacaca;
 }
