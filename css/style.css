@@ -435,8 +435,8 @@ footer,
 .map-form-show {
   display: block;
 
-  -webkit-animation: bounce 0.5s ease-in-out;
-          animation: bounce 0.5s ease-in-out;
+  -webkit-animation: bounce 0.6s ease-in-out;
+          animation: bounce 0.6s ease-in-out;
 }
 .map-form-close {
   display: block;
@@ -449,19 +449,19 @@ footer,
     -webkit-transform: translate(-50%, -400px);
             transform: translate(-50%, -400px);
   }
-  20% {
+  40% {
     -webkit-transform: translate(-50%, 10px);
             transform: translate(-50%, 10px);
   }
-  40% {
-    -webkit-transform: translate(-50%, 40px);
-            transform: translate(-50%, 40px);
+  55% {
+    -webkit-transform: translate(-50%, 20px);
+            transform: translate(-50%, 20px);
   }
-  60% {
-    -webkit-transform: translate(-50%, 70px);
-            transform: translate(-50%, 70px);
+  65% {
+    -webkit-transform: translate(-50%, 30px);
+            transform: translate(-50%, 30px);
   }
-  70% {
+  75% {
     -webkit-transform: translate(-50%, 20px);
             transform: translate(-50%, 20px);
   }
@@ -488,12 +488,12 @@ footer,
             transform: translate(-50%, 20px);
   }
   60% {
-    -webkit-transform: translate(-50%, 70px);
-            transform: translate(-50%, 70px);
+    -webkit-transform: translate(-50%, 20px);
+            transform: translate(-50%, 20px);
   }
   70% {
-    -webkit-transform: translate(-50%, 40px);
-            transform: translate(-50%, 40px);
+    -webkit-transform: translate(-50%, 20px);
+            transform: translate(-50%, 20px);
   }
   90% {
     -webkit-transform: translate(-50%, 10px);
