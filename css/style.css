@@ -444,7 +444,38 @@ footer,
   -webkit-animation: form-up 0.5s ease-in-out forwards;
           animation: form-up 0.5s ease-in-out forwards;
 }
+
 @-webkit-keyframes form-down {
+  0% {
+    -webkit-transform: translate(-50%, -400px);
+            transform: translate(-50%, -400px);
+  }
+  40% {
+    -webkit-transform: translate(-50%, 10px);
+            transform: translate(-50%, 10px);
+  }
+  55% {
+    -webkit-transform: translate(-50%, 20px);
+            transform: translate(-50%, 20px);
+  }
+  65% {
+    -webkit-transform: translate(-50%, 30px);
+            transform: translate(-50%, 30px);
+  }
+  75% {
+    -webkit-transform: translate(-50%, 20px);
+            transform: translate(-50%, 20px);
+  }
+  90% {
+    -webkit-transform: translate(-50%, -10px);
+            transform: translate(-50%, -10px);
+  }
+  100% {
+    -webkit-transform: translate(-50%, 0px);
+            transform: translate(-50%, 0px);
+  }
+}
+@keyframes form-down {
   0% {
     -webkit-transform: translate(-50%, -400px);
             transform: translate(-50%, -400px);
@@ -504,6 +535,36 @@ footer,
             transform: translate(-50%, -400px);
   }
 }
+@keyframes form-up {
+  0% {
+    -webkit-transform: translate(-50%, 0px);
+            transform: translate(-50%, 0px);
+  }
+  20% {
+    -webkit-transform: translate(-50%, -10px);
+            transform: translate(-50%, -10px);
+  }
+  40% {
+    -webkit-transform: translate(-50%, 20px);
+            transform: translate(-50%, 20px);
+  }
+  60% {
+    -webkit-transform: translate(-50%, 20px);
+            transform: translate(-50%, 20px);
+  }
+  70% {
+    -webkit-transform: translate(-50%, 20px);
+            transform: translate(-50%, 20px);
+  }
+  90% {
+    -webkit-transform: translate(-50%, 10px);
+            transform: translate(-50%, 10px);
+  }
+  100% {
+    -webkit-transform: translate(-50%, -400px);
+            transform: translate(-50%, -400px);
+  }
+}
 .map-form label {
   font-weight: bold;
 }
@@ -531,7 +592,8 @@ footer,
   margin-bottom: 55px;
 }
 .input-date input[type=text] {
-  width: 325px;
+  width: 321px;
+  height: 26px;
   padding: 5px 9px 4px 12px;
 
   font-weight: bold;
