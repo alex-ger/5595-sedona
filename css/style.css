@@ -7,7 +7,6 @@
   src: url("../fonts/symbols-sedona.woff") format("woff"),
   url("../fonts/symbols-sedona.woff2") format("woff2");
 }
-
 [class^="icon-"]::before,
 [class*=" icon-"]::before {
   display: inline-block;
@@ -357,7 +356,6 @@ footer,
   width: 64px;
   height: 76px;
 }
-.image-home
 .features-item h2 {
   line-height: 35px;
 }
